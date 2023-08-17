@@ -7,14 +7,15 @@ body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #f4f4f4;
+  /* background-color: #f4f4f4; */
+  color: #535353;
 }
 
 /* Container Styles */
 .container {
   max-width: 800px;
   margin: 0 auto;
-  background-color: #fff;
+  /* background-color: #fff; */
   padding: 2em;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 }
@@ -28,9 +29,13 @@ body {
 h1 {
   text-align: center;
   margin-bottom: 0;
-
+  color: #eebf00;
 }
 
+a {
+  color: #ff31bd;
+  font-weight: bold;
+}
 /* Logo styles */
 .logo {
   width: 15em;
@@ -48,7 +53,7 @@ h1 {
 
 .date {
   width: 100%;
-  border-bottom: 1px solid #ccc;
+  border-bottom: 1px solid #ff9500;
   margin-bottom: 0.5em;
   float: none;
   padding: 10% 1% 0 0;
@@ -57,11 +62,13 @@ h1 {
 .date h3 {
   font-size: 1.5em;
   margin: 0;
+  color: #ff7a06;
 }
 
 .date p {
   font-size: .8em;
   margin-top: 0.3em;
+
 }
 
 .event {
@@ -100,8 +107,8 @@ h1 {
 
 /* Accordion styles */
 .accordion {
-  background-color: #eee;
-  color: #444;
+  background: linear-gradient(262deg, #ff31bd 11%, #ff5f00 100%);
+  color: #fff!important;
   cursor: pointer;
   padding: 1em;
   width: 100%;
@@ -109,19 +116,20 @@ h1 {
   border: none;
   outline: none;
   transition: 0.4s;
+  box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.1);
 }
 
 .accordion:after {
   content: "\02795";
   font-size: 13px;
-  color: #777;
+  color: #fff!important;
   float: right;
   margin-left: 5px;
 }
 
-.accordion.active, .accordion:hover {
-  background-color: #ddd;
-}
+/* .accordion:hover {
+  background: linear-gradient(262deg, #ff31bd 11%, #ff5f00 100%);
+} */
 
 .accordion.active:after {
   content: "\2796";
@@ -129,10 +137,14 @@ h1 {
 
 article.panel {
   padding: 0 1em;
-  background-color: white;
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.2s ease-out;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.info {
+  margin: 3em auto;
 }
 
 /* Media queries for larger screens */
@@ -159,6 +171,10 @@ article.panel {
 
   .event-details li {
     padding: 0.3em 0;
+  }
+
+  .info {
+    width: 50%;
   }
 
 }
